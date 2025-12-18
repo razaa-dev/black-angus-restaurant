@@ -10,7 +10,7 @@ function TrackPageView() {
 
   useEffect(() => {
     // Initialize Fathom on mount
-    const siteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID;
+    const siteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID || 'HSIOXICW';
 
     if (siteId && siteId !== 'YOUR_FATHOM_SITE_ID') {
       Fathom.load(siteId, {
@@ -22,7 +22,7 @@ function TrackPageView() {
 
   useEffect(() => {
     // Track pageview on route change
-    const siteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID;
+    const siteId = process.env.NEXT_PUBLIC_FATHOM_SITE_ID || 'HSIOXICW';
 
     if (siteId && siteId !== 'YOUR_FATHOM_SITE_ID') {
       Fathom.trackPageview();
